@@ -23,7 +23,7 @@ const Notifications = () => {
           <h1>{call.name} is calling:</h1>
 
           <Button variant="contained" color="primary" onClick={answerCall}>
-            Answer
+            Join Call
 
           </Button>
         </div>
@@ -33,7 +33,7 @@ const Notifications = () => {
 
     </>
 
-    
+
   );
 };
 

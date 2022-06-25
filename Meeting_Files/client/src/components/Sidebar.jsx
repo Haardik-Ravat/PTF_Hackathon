@@ -11,12 +11,16 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
   },
+
+
   gridContainer: {
     width: '100%',
     [theme.breakpoints.down('xs')]: {
       flexDirection: 'column',
     },
   },
+
+
   container: {
     width: '600px',
     margin: '35px 0',
@@ -25,16 +29,21 @@ const useStyles = makeStyles((theme) => ({
       width: '80%',
     },
   },
+
+
   margin: {
     marginTop: 20,
   },
+
   padding: {
     padding: 20,
   },
+
   paper: {
     padding: '10px 20px',
     border: '2px solid black',
   },
+  
 }));
 
 
@@ -70,7 +79,7 @@ const Sidebar = ({ children }) => {
 
                 <Button variant="contained" color="primary" fullWidth startIcon={<Assignment fontSize="large" />}>
 
-                  Copy Your ID
+                  Invite Link
 
 
                 </Button>
@@ -82,24 +91,24 @@ const Sidebar = ({ children }) => {
             </Grid>
             <Grid item xs={12} md={6} className={classes.padding}>
 
-              
+
               <Typography gutterBottom variant="h6">Make a call</Typography>
 
 
-              <TextField label="ID to call" value={idToCall} onChange={(e) => setIdToCall(e.target.value)} fullWidth />
+              <TextField label="Meeting ID" value={idToCall} onChange={(e) => setIdToCall(e.target.value)} fullWidth />
 
 
 
               {callAccepted && !callEnded ? (
                 <Button variant="contained" color="secondary" startIcon={<PhoneDisabled fontSize="large" />} fullWidth onClick={leaveCall} className={classes.margin}>
-                  Hang Up
+                  Disconnect
                 </Button>
 
 
 
               ) : (
                 <Button variant="contained" color="primary" startIcon={<Phone fontSize="large" />} fullWidth onClick={() => callUser(idToCall)} className={classes.margin}>
-                  Call
+                  Make a call
                 </Button>
               )}
 
